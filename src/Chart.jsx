@@ -13,7 +13,7 @@ export default class Chart extends PureComponent {
     },
     series: [
       {
-        data: [1, 3, 4, 10, 9]
+        data: [1, 3, 4, 10, 9, 15, 81, 6, 7]
       }
     ]
   };
