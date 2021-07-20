@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import axios from 'axios';
 
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
@@ -10,7 +11,6 @@ HighchartsMore(Highcharts);
 export default function WaterfallChart() {
 
   const [language, setLanguage] = useState('EN');
-  console.log('Bernardinho Teste', language)
 
   function handleLanguageClick(){
     setLanguage(language === 'EN' ? 'PT-BR' : 'EN')
@@ -21,7 +21,11 @@ export default function WaterfallChart() {
   useEffect(() => {
     Highcharts.chart(refContainer.current, {
       chart: {
-        type: "waterfall"
+        type: "waterfall",
+        style: {
+          borderRadius: '10px',
+          padding: '1rem 0'
+        }
       },
       title: {
         text: ""
@@ -92,7 +96,6 @@ export default function WaterfallChart() {
   }, [language]);
   
 
-
   return (
     <>
       <Container>
@@ -107,7 +110,9 @@ export default function WaterfallChart() {
                   }
               </ParagraphInfo>
               <PrimaryButton onClick={handleLanguageClick} className='buttonPrimary'>
-                  {language === 'PT-BR' ? 'Change To English' : 'Mudar Para Português'}
+                  {
+                  language === 'PT-BR' ? 'Change To English' : 'Mudar Para Português'
+                  }
               </PrimaryButton>
           </InfoDiv>
         </Card>

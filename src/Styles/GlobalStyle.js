@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --main-dark: #14213D;
     --main-white: #FFFFFF;
     --light-gray: #E5E5E5;
+    --secondary-light-gray: #F7F8FA;
     --orange-primary: #FCA311;
     --green-primary: #80ED99;
     --red-primary: #E53124;
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     min-height: 100%;
-    background: var(--primary-font);
+    background: var(--secondary-light-gray);
   }
 
   body{
