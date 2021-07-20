@@ -1,12 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
-import "../styles.css";
+
+import styled from 'styled-components'
 
 HighchartsMore(Highcharts);
 
 export default function WaterfallChart() {
+
+  const [language, setLanguage] = useState('EN');
+  console.log('Bernardinho Teste', language)
+
+  function handleLanguageClick(){
+    setLanguage(language === 'EN' ? 'PT-BR' : 'EN')
+  }
+
   const refContainer = useRef(null);
+
   useEffect(() => {
     Highcharts.chart(refContainer.current, {
       chart: {
@@ -20,19 +31,19 @@ export default function WaterfallChart() {
       },
       yAxis: {
         title: {
-          text: "USD"
+          text: ""
         }
+      },
+      style:{
+        width: '960px'
       },
       legend: {
         enabled: false
       },
-      tooltip: {
-        pointFormat: "<b>${point.y:,.2f}</b> USD"
-      },
       series: [
         {
-          upColor: Highcharts.getOptions().colors[2],
-          color: Highcharts.getOptions().colors[3],
+          upColor: '#219EBC',
+          color: '#FB8500',
           data: [
             {
               name: "Start",
@@ -78,11 +89,66 @@ export default function WaterfallChart() {
         }
       ]
     });
-  }, []);
+  }, [language]);
+  
+  /*Styled Components*/
+  const Title = styled.h1`
+    text-align: center;
+    color: var(--main-dark);
+    font-family: var(--primary-font);
+    padding: 2rem;
+  `;
+
+  const Card = styled.div`
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid red;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.056);
+    backdrop-filter: blur( 0.0px );
+    -webkit-backdrop-filter: blur( 0.0px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.145);
+  `;
+
+  const Chart = styled.div`
+    font-family: var(--primary-font);
+    width: 100%;
+  `;
+
+  const InfoDiv = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
+  `;
+
+
+  const PrimaryButton = styled.button`
+    padding: 2rem;
+  `;
+
+  const ParagraphInfo = styled.p``
 
   return (
-    <div className="App">
-      <div ref={refContainer} />
-    </div>
+    <>
+      <Title>WatterFall Highchart</Title>
+      <Card>
+          <Chart ref={refContainer}/>
+          <InfoDiv>
+            <ParagraphInfo>
+                {
+                language === 'PT-BR' ? 'Gráficos de cachoeiras são usados para visualizar valores cumulativos, onde cada ponto de dados contribui para um total. Neste exemplo, pontos que mostram somas intermediárias são utilizados para indicar a progressão do total.' 
+                : 'Waterfall charts are used to visualize cumulative values, where each data point contributes to a total. In this example, points showing intermediate sums are used to indicate the progression of the total.'
+                }
+            </ParagraphInfo>
+            <PrimaryButton onClick={handleLanguageClick} className='buttonPrimary'>
+                {language === 'EN' ? 'PT-BR' : 'EN'}
+            </PrimaryButton>
+        </InfoDiv>
+      </Card>
+    </>
   );
 }
