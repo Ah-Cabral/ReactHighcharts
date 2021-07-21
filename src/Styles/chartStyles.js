@@ -17,11 +17,7 @@ import styled from 'styled-components'
     width: 100%;
     height: 100%;
     margin: 3rem 0;
-    border: 1px solid red;
-    background: rgba( 255, 255, 255, 0.15 );
     -webkit-backdrop-filter: blur( 0.0px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.145);
   `;
 
   export const Chart = styled.div`
