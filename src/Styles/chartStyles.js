@@ -10,6 +10,7 @@ import styled from 'styled-components'
     text-align: center;
     color: var(--main-dark);
     font-family: var(--primary-font);
+    padding: 1rem 0;
   `;
 
   export const Card = styled.div`
@@ -42,12 +43,13 @@ import styled from 'styled-components'
 
   export const PrimaryButton = styled.button`
     padding: 1rem;
-    width: 10rem;
+    width: 12rem;
     margin: 0 auto;
     border: 1px solid var(--light-gray);
     background-color: var(--main-dark);
     color: var(--main-white);
     border-radius: 5px;
+    cursor: pointer;
   `;
 
   export const ParagraphInfo = styled.p`

@@ -1,14 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+/* import axios from 'axios'; */
 
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
 
-import {Title, Card, Chart, InfoDiv, PrimaryButton, ParagraphInfo, Container} from './Styles';
+import {Title, Card, Chart, InfoDiv, PrimaryButton, ParagraphInfo, Container} from '../../Styles/chartStyles';
 
 HighchartsMore(Highcharts);
 
 export default function WaterfallChart() {
+
+/*   useEffect(() =>{
+    axios.get('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=iwjKPAF3SirbZupYMyX2huKg_jfuv_ji')
+    .then((res) => console.log(res))
+  }) */
 
   const [language, setLanguage] = useState('EN');
 
@@ -16,10 +21,8 @@ export default function WaterfallChart() {
     setLanguage(language === 'EN' ? 'PT-BR' : 'EN')
   }
 
-  const refContainer = useRef(null);
-
   useEffect(() => {
-    Highcharts.chart(refContainer.current, {
+    Highcharts.chart('WaterfallChart', {
       chart: {
         type: "waterfall",
         style: {
@@ -101,7 +104,7 @@ export default function WaterfallChart() {
       <Container>
         <Card>
           <Title>{language === 'PT-BR' ? 'Gráfico De Cachoeira' : 'WatterFall Highchart'} </Title>
-            <Chart ref={refContainer}/>
+            <Chart id='WaterfallChart'/>
             <InfoDiv>
               <ParagraphInfo>
                   {
