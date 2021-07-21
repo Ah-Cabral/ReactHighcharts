@@ -54,15 +54,19 @@ export default function WaterfallChart() {
           data: [
             {
               name: language === 'PT-BR' ? 'Valor Inicial' : "Start Value",
-              y: 120000
+              y: 1000
             },
             {
               name: language === 'PT-BR' ? "Receita Do Produto" : "Product Revenue",
-              y: 569000
+              y: 3000
             },
             {
               name: language === 'PT-BR' ? "Receita de serviço" : 'Service Revenue',
-              y: 231000
+              y: 1500
+            },
+            {
+              name: language === 'PT-BR' ? "Receita Passiva" : 'Passive Revenue',
+              y: 500
             },
             {
               name: language === 'PT-BR' ? "Saldo Positivo" : "Positive Balance",
@@ -71,11 +75,11 @@ export default function WaterfallChart() {
             },
             {
               name: language === 'PT-BR' ? "Custos Fixos" : "Fixed Costs",
-              y: -342000
+              y: -500
             },
             {
               name: language === 'PT-BR' ? "Custos Variáveis" : "Variable Costs",
-              y: -233000
+              y: -1200
             },
             {
               name: language === 'PT-BR' ? "Saldo Final" : "Final Balance",
@@ -86,7 +90,7 @@ export default function WaterfallChart() {
           dataLabels: {
             enabled: true,
             formatter: function () {
-              return Highcharts.numberFormat(this.y / 1000, 0, ",") + "k";
+              return Highcharts.numberFormat(this.y);
             },
             style: {
               fontWeight: "bold"
