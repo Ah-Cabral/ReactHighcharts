@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     --primary-font: 'Montserrat', sans-serif;
     --main-dark: #191816;
     --main-white: #FFFFFF;
-    --orange-primary: #FF8700;
+    --light-gray: #F6F6F6;
+    --orange-primary: #FB8B24;
     }
 
     * {
@@ -31,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
     background: none;
     font-family: var(--primary-font);
     color: var(---main-dark);
-
     transition: color .2s ease-out;
     }
 
@@ -42,7 +42,6 @@ export const GlobalStyle = createGlobalStyle`
   .lineDiv{
     display: flex;
     flex-wrap: wrap;
-    max-width: 960px;
     margin: 0 auto;
     align-items: center;
   }
