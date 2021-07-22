@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-/* import axios from 'axios'; */
 
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
@@ -31,9 +30,9 @@ export default function StockChart(){
         yAxis: {
             title: '',
             labels: {
-            formatter: function () {
-                return this.value;
-            }
+                formatter: function () {
+                    return this.value;
+                }
             }
         },
         tooltip: {
