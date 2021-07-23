@@ -11,8 +11,8 @@ export const MainHeader = styled.header`
 `;
 
 
-/* export const Container = styled.div`
-`; */
+export const Container = styled.div`
+`;
 
 export const Card = styled.div`
   background: rgba( 255, 255, 255, 0.75 );
