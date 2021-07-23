@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     --orange-primary: #FB8B24;
     }
 
-    * {
+  * {
     margin: 0;
     padding: 0;
     outline: none;
@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: var(--primary-font);
     color: var(---main-dark);
     transition: color .2s ease-out;
-    }
+  }
 
   ul {
     list-style: none;
@@ -42,7 +42,6 @@ export const GlobalStyle = createGlobalStyle`
   .lineDiv{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     align-items: center;
   }
 

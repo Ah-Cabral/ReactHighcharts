@@ -14,7 +14,7 @@ export default function StockChart(){
         chart:{
             type: 'line',
             width: 280,
-            height: 250
+            height: 250,
         },
         title: {
             text: ""

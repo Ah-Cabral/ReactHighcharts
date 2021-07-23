@@ -28,26 +28,25 @@ export default function PieChart() {
       }, 
       series: [
         {
-          name: "Brands",
+          name: "",
           colorByPoint: true,
           data: [
             {
-              name: "Chrome",
+              name: "Piece 1",
               y: 60,
               sliced: true,
-              selected: true
+              color: '#FB8B24'
             },
             {
-              name: "Chrome1",
+              name: "Piece 2",
               y: 30,
               sliced: true,
-              selected: true
             },
             {
-              name: "Chrome2",
+              name: "Piece 3",
               y: 10,
               sliced: true,
-              selected: true
+              color: '#191816'
             },
           ]
         }
