@@ -19,6 +19,9 @@ export default function StockChart(){
         title: {
             text: ""
         },
+        credits:{
+            enabled: false
+        },
         xAxis: {
             allowDecimals: false,
             labels: {

@@ -17,7 +17,7 @@ export default function WaterfallChart() {
           borderRadius: '10px',
           padding: '1rem 0'
         },
-        width: 280,
+        width: 450,
         height: 215
       },
       title: {
@@ -25,6 +25,9 @@ export default function WaterfallChart() {
       },
       xAxis: {
         type: "category"
+      },
+      credits:{
+        enabled: false
       },
       yAxis: {
         title: {

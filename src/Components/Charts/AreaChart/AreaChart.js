@@ -15,6 +15,9 @@ export default function AreaChart() {
       title: {
         text: ""
       },
+      credits:{
+        enabled: false
+      },
       xAxis: {
         allowDecimals: false,
         labels: {

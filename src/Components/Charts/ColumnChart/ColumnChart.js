@@ -14,13 +14,16 @@ export default function ColumnChart() {
         type: "column",
         width: 280,
         height: 250
-      }, // type of the chart
+      },
       title: {
-        text: "Column Chart"
-      }, // title of the chart
+        text: ""
+      }, 
       subtitle: {
         text: ""
-      }, // subtitle of the chart
+      },
+      credits:{
+        enabled: false
+      },
       xAxis: {
         categories: [
           "22/11/2020",
@@ -28,14 +31,14 @@ export default function ColumnChart() {
           "21/11/2020",
           "25/11/2020",
           "26/11/2020"
-        ], // the categories of the X Axis
+        ],
         crosshair: true
       },
       yAxis: {
-        min: 0, // minimum value of the Y Axis
+        min: 0,
         title: {
           text: "Number of Covid cases"
-        } // the title of the Y Axis
+        }
       },
       tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
@@ -45,24 +48,19 @@ export default function ColumnChart() {
         footerFormat: "</table>",
         shared: true,
         useHTML: true
-      }, // tooltip appears when hovering over a point
-      credits: {
-        enabled: false
       },
       series: [
         {
-          name: "Morocco",
-          data: [4706, 4702, 3979, 2547, 3999]
+          name: "Brazil",
+          data: [4706, 4702, 3979, 2547, 3999],
+          color: '#191816'
         },
         {
-          name: "Germany",
-          data: [4000, 5000, 4800, 4000, 5100]
-        },
-        {
-          name: "Canada",
-          data: [6100, 5000, 6000, 4800, 4000]
+          name: "USA",
+          data: [4000, 5000, 4800, 4000, 5100],
+          color: '#FF8700'
         }
-      ] // set of the data
+      ]
     });
   });
 
