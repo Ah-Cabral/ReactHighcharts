@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 
-import {Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 export default function AreaChart() {
 
@@ -9,7 +9,7 @@ export default function AreaChart() {
     Highcharts.chart('AreaChart', {
       chart: {
         type: "area",
-        width: 280,
+        width: 300,
         height: 250
       },
       title: {
@@ -52,10 +52,8 @@ export default function AreaChart() {
   });
 
   return (
-    <Container>
-      <Card>
-        <Chart id='AreaChart' />
-      </Card>
-    </Container>
+    <Card>
+      <Chart id='AreaChart' />
+    </Card>
   );
 }

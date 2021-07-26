@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
 
-import {Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 HighchartsMore(Highcharts);
 
@@ -13,12 +13,8 @@ export default function WaterfallChart() {
     Highcharts.chart('WaterfallChart', {
       chart: {
         type: "waterfall",
-        style: {
-          borderRadius: '10px',
-          padding: '1rem 0'
-        },
-        width: 450,
-        height: 215
+        width: 300,
+        height: 250
       },
       title: {
         text: ""
@@ -33,9 +29,6 @@ export default function WaterfallChart() {
         title: {
           text: ""
         }
-      },
-      style:{
-        width: '960px'
       },
       legend: {
         enabled: false
@@ -97,12 +90,8 @@ export default function WaterfallChart() {
   
 
   return (
-    <>
-      <Container>
-        <Card>
-            <Chart id='WaterfallChart'/>
-        </Card>
-      </Container>
-    </>
+    <Card>
+        <Chart id='WaterfallChart'/>
+    </Card>
   );
 }

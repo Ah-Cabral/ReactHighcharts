@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 
-import {Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 export default function PieChart() {
   useEffect(() => {
     Highcharts.chart('PieChart', {
       chart: {
         type: "pie",
-        width: 350,
-        height: 300
+        width: 300,
+        height: 250
       },
       title: {
-        text: ""
+        text: "Pie Chart"
       },
       subtitle: {
         text: ""
@@ -55,10 +55,8 @@ export default function PieChart() {
   }, []);
 
   return (
-    <Container>
-      <Card>
-        <Chart id='PieChart' />
-      </Card>
-    </Container>
+  <Card>
+    <Chart id='PieChart' />
+  </Card>
   );
 }

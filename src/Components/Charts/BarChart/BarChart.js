@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 
-import { Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 export default function BarChart() {
   useEffect(() => {
@@ -9,78 +9,46 @@ export default function BarChart() {
     Highcharts.chart('BarChart', {
         chart: {
           type: 'bar',
-          width: 450,
-          height: 300
+          width: 300,
+          height: 250
         },
         title: {
-          text: 'Historic World Population by Region'
-        },
-        subtitle: {
-          text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+          text: 'Number Examples'
         },
         xAxis: {
-          categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+          categories: ['Number 1', 'Number 2', 'Number 3', 'Number 4', 'Number 5'],
           title: {
             text: null
           }
         },
         yAxis: {
           min: 0,
-          title: {
-            text: 'Population (millions)',
-            align: 'high'
-          },
           labels: {
             overflow: 'justify'
           }
         },
         tooltip: {
-          valueSuffix: ' millions'
-        },
-        plotOptions: {
-          bar: {
-            dataLabels: {
-              enabled: true
-            }
-          }
-        },
-        legend: {
-          layout: 'vertical',
-          align: 'right',
-          verticalAlign: 'top',
-          x: -40,
-          y: 80,
-          floating: true,
-          borderWidth: 1,
-          backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-          shadow: true
+          valueSuffix: ' * 1000'
         },
         credits: {
           enabled: false
         },
         series: [{
-          name: 'Year 1800',
-          data: [107, 31, 635, 203, 2]
+          name: 'Numbers 1',
+          data: [814, 841, 3714, 727, 31],
+          color: "#FB8B24"
         }, {
-          name: 'Year 1900',
-          data: [133, 156, 947, 408, 6]
-        }, {
-          name: 'Year 2000',
-          data: [814, 841, 3714, 727, 31]
-        }, {
-          name: 'Year 2016',
-          data: [1216, 1001, 4436, 738, 40]
+          name: 'Numbers 2',
+          data: [1216, 1001, 4436, 738, 40],
+          color: "#191816"
         }]
       });
 
     }, []);
 
   return (
-    <Container>
-        <Card>
-            <Chart id='BarChart' />
-        </Card>
-    </Container>
+    <Card>
+        <Chart id='BarChart' />
+    </Card>
   );
 }

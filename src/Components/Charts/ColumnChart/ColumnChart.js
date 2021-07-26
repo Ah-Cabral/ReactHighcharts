@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
 
-import { Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 HighchartsMore(Highcharts);
 
@@ -12,7 +12,7 @@ export default function ColumnChart() {
     Highcharts.chart('ColumnChart', {
       chart: {
         type: "column",
-        width: 280,
+        width: 300,
         height: 250
       },
       title: {
@@ -65,10 +65,8 @@ export default function ColumnChart() {
   });
 
   return (
-    <Container>
-        <Card>
-            <Chart id='ColumnChart' />
-        </Card>
-    </Container>
+  <Card>
+      <Chart id='ColumnChart' />
+  </Card>
   );
 }

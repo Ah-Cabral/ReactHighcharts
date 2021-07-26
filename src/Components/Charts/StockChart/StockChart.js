@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
 
-import { Card, Chart, Container} from '../../../Styles/chartStyles';
+import { Card, Chart } from '../../../Styles/chartStyles';
 
 HighchartsMore(Highcharts);
 
@@ -13,7 +13,7 @@ export default function StockChart(){
         Highcharts.chart('StockChart',{
         chart:{
             type: 'line',
-            width: 280,
+            width: 300,
             height: 250,
         },
         title: {
@@ -66,11 +66,9 @@ export default function StockChart(){
     }, [])
 
     return (
-    <Container>
-        <Card>
-            <Chart id='StockChart' />
-        </Card>
-    </Container>
+    <Card>
+        <Chart id='StockChart' />
+    </Card>
     );
 
 }
