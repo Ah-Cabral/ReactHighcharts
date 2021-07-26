@@ -12,7 +12,7 @@ export default function PieChart() {
         height: 250
       },
       title: {
-        text: "Pie Chart"
+        text: "Criptocurrency PieChart"
       },
       subtitle: {
         text: ""
@@ -32,18 +32,18 @@ export default function PieChart() {
           colorByPoint: true,
           data: [
             {
-              name: "Piece 1",
+              name: "Bitcoin",
               y: 60,
               sliced: true,
               color: '#FB8B24'
             },
             {
-              name: "Piece 2",
+              name: "Ethereum",
               y: 30,
               sliced: true,
             },
             {
-              name: "Piece 3",
+              name: "Theter",
               y: 10,
               sliced: true,
               color: '#191816'

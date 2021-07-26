@@ -16,7 +16,7 @@ export default function ColumnChart() {
         height: 250
       },
       title: {
-        text: ""
+        text: "Covid Cases"
       }, 
       subtitle: {
         text: ""
@@ -26,11 +26,11 @@ export default function ColumnChart() {
       },
       xAxis: {
         categories: [
-          "22/11/2020",
-          "23/11/2020",
-          "21/11/2020",
           "25/11/2020",
-          "26/11/2020"
+          "26/11/2020",
+          "27/11/2020",
+          "28/11/2020",
+          "29/11/2020"
         ],
         crosshair: true
       },

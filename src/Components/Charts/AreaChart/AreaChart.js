@@ -13,7 +13,7 @@ export default function AreaChart() {
         height: 250
       },
       title: {
-        text: ""
+        text: "USA And Canada Areas"
       },
       credits:{
         enabled: false
@@ -38,12 +38,12 @@ export default function AreaChart() {
       },
       series: [
         {
-          name: "Area 01",
+          name: "USA",
           data: [4, 5, 6],
           color: '#191816'
         },
         {
-          name: "Area 02",
+          name: "Canada",
           data: [1, 2, 3],
           color: '#FF8700'
         }

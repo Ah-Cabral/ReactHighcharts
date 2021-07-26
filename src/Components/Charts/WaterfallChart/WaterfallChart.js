@@ -17,7 +17,7 @@ export default function WaterfallChart() {
         height: 250
       },
       title: {
-        text: ""
+        text: "Business Transactions Analysis"
       },
       xAxis: {
         type: "category"

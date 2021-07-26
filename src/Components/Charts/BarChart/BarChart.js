@@ -13,10 +13,10 @@ export default function BarChart() {
           height: 250
         },
         title: {
-          text: 'Number Examples'
+          text: 'Currency Analysis'
         },
         xAxis: {
-          categories: ['Number 1', 'Number 2', 'Number 3', 'Number 4', 'Number 5'],
+          categories: ['Currency Type I', 'Currency Type II', 'Currency Type I', 'Currency Type II'],
           title: {
             text: null
           }
@@ -34,11 +34,11 @@ export default function BarChart() {
           enabled: false
         },
         series: [{
-          name: 'Numbers 1',
+          name: 'Dollar',
           data: [814, 841, 3714, 727, 31],
           color: "#FB8B24"
         }, {
-          name: 'Numbers 2',
+          name: 'Real (BRL)',
           data: [1216, 1001, 4436, 738, 40],
           color: "#191816"
         }]

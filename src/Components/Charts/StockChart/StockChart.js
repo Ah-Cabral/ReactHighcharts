@@ -17,7 +17,7 @@ export default function StockChart(){
             height: 250,
         },
         title: {
-            text: ""
+            text: "Facebook Stock Analysis"
         },
         credits:{
             enabled: false
@@ -39,7 +39,7 @@ export default function StockChart(){
             }
         },
         tooltip: {
-            pointFormat: "Stock Value: <b>{point.y:,.0f}</b>"
+            pointFormat: "Stock Value: <b>{point.y}</b>"
         },
         plotOptions: {
             area: {
@@ -57,8 +57,8 @@ export default function StockChart(){
         },
         series: [
             {
-                name: "Stock Example",
-                data: [1, 2, 3],
+                name: "Stock",
+                data: [1, 2, 3, 10, 8.5, 8.7, 8.9, 8.1, 11.2, 11.35, 11.4, 11.43, 11.9],
                 color: '#FF8700'
             }
         ]
