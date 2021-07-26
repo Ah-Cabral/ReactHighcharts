@@ -5,7 +5,7 @@ import { Badge } from '../../Styles/BadgeStyle';
 const CostBadge = () => {
     return (
         <Badge>
-            <i class="fas fa-chart-pie"></i> 
+            <i class="fas fa-file-contract"></i>
             <div>
                 <h4>
                     Cost Badge
